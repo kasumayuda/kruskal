@@ -29,7 +29,7 @@ namespace Kruskal
 
             int e = 0;
             int i = 0;
-
+            //sort by weight - ascending
             QuickSort(ref edge, 0, result.Length);
 
             Subset[] subsets = new Subset[V];
@@ -57,7 +57,7 @@ namespace Kruskal
                     result[e++] = nextEdge;
                     Union(subsets, x, y);
                 }
-                // Else discard the next_edge
+         
             }
 
             for (int j = 0; j < e; j++)
