@@ -61,7 +61,7 @@ namespace Kruskal
             int cost = 0;
             for (int j = 0; j < e; j++)
             {
-                Console.WriteLine(result[j].source + " -- " + result[j].destination + " == " + result[j].weight);
+                Console.WriteLine(ConvertNumToLetter(result[j].source) + " -- " + ConvertNumToLetter(result[j].destination) + " == " + result[j].weight);
                 cost += result[j].weight;
             }
             Console.WriteLine(string.Format("Cost : {0}", cost));
@@ -70,6 +70,12 @@ namespace Kruskal
         #endregion
 
         #region Private methods
+        private string ConvertNumToLetter(int i)
+        {
+            string letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            return letters[i].ToString();
+        }
+
         private void QuickSort(ref Edge[] edge, int p, int r)
         {
             int i = p, j = r, m = (i + j) / 2;
