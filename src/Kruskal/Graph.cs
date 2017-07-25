@@ -65,7 +65,7 @@ namespace Kruskal
                 cost += result[j].weight;
             }
             Console.WriteLine(string.Format("Cost : {0}", cost));
-            Console.ReadLine();
+            
         } 
         #endregion
 
