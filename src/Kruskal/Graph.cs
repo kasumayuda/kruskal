@@ -32,8 +32,7 @@ namespace Kruskal
             //sort by weight - ascending
             QuickSort(ref edge, 0, result.Length);
 
-            Subset[] subsets = new Subset[V];
-            
+            Subset[] subsets = new Subset[V];            
             // Create V subsets with single elements
             for (int v = 0; v < V; ++v)
             {
@@ -56,17 +55,17 @@ namespace Kruskal
                 {
                     result[e++] = nextEdge;
                     Union(subsets, x, y);
-                }
-         
+                }         
             }
 
+            int cost = 0;
             for (int j = 0; j < e; j++)
             {
                 Console.WriteLine(result[j].source + " -- " + result[j].destination + " == " + result[j].weight);
+                cost += result[j].weight;
             }
-
+            Console.WriteLine(string.Format("Cost : {0}", cost));
             Console.ReadLine();
-
         } 
         #endregion
 
