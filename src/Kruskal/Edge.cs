@@ -9,10 +9,10 @@ namespace Kruskal
     {
         public int source, destination, weight;
 
-        public int ComparetTo(Edge compareTo)
-        {
-            return this.weight - compareTo.weight;
-        }
+        //public int ComparetTo(Edge compareTo)
+        //{
+        //    return this.weight - compareTo.weight;
+        //}
 
     }
 }

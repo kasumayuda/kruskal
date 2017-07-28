@@ -33,7 +33,7 @@ namespace Kruskal
             QuickSort(ref edge, 0, result.Length);
 
             Subset[] subsets = new Subset[V];            
-            // Create V subsets with single elements
+            // initialise disjoint set
             for (int v = 0; v < V; ++v)
             {
                 subsets[v] = new Subset();
